@@ -36,7 +36,7 @@ CVPR2016の論文です。
 著者たちは深層残差学習(deep residual learning)を提案した。
 ネットワークの幾つかの連続の層に直接学習してほしい写像${\cal H}({\bf x})$を学習させる代わりに、${\cal F}({\bf x}) = {\cal H}({\bf x}) - {\bf x}$を学習させる。つまり、元の写像は${\cal F}({\bf x}) + {\bf x}$で表すことができる。この残差を足すことで、ネットワークが最適されやすなることが実験によって証明された。この手法はshortcut connectionで図1のように簡単に実装できる（図1は元論文から引用したもの）。
 
-|![shortcut connection](../figures/skip_connection.png)|
+|![shortcut connection](./figures/skip_connection.png)|
 |:--:|
 |*図1　shortcut connection*|
 
@@ -60,11 +60,11 @@ n = [3, 5, 7, 9]、つまり層数 = [20, 32, 44, 56]のplain networks及びResN
 
 学習時のロスは図2と図3で示されている。最終のモデルのテストセットでの正確率は表1で示されている。
 
-|![Plain Networks Training Loss](../figures/plain.png)|
+|![Plain Networks Training Loss](./figures/plain.png)|
 |:--:|
 |*図2　Plain　Networksの学習時ロス*|
 
-|![ResNet Training Loss](../figures/ResNet.png)|
+|![ResNet Training Loss](./figures/ResNet.png)|
 |:--:|
 |*図3　ResNetの学習時ロス*|
 
