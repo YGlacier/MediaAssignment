@@ -38,7 +38,7 @@ CVPR2016の論文です。
 
 |![shortcut connection](./figures/skip_connection.png)|
 |:--:|
-|*図1　shortcut connection*|
+|*図1　Shortcut connection*|
 
 もし最適な写像が恒等写像だったら、この残差学習を用いることで、ネットワークが簡単に最適化される（重み付き層を零写像にすればいい）。実際に、恒等写像が最適とは限らない。とは言っても、最適な写像が零写像より恒等写像に近い限り、残差学習の方が最適化されやすいはずだ。
 
@@ -62,7 +62,7 @@ n = [3, 5, 7, 9]、つまり層数 = [20, 32, 44, 56]のplain networks及びResN
 
 |![Plain Networks Training Loss](./figures/plain.png)|
 |:--:|
-|*図2　Plain　Networksの学習時ロス*|
+|*図2　Plain Networksの学習時ロス*|
 
 |![ResNet Training Loss](./figures/ResNet.png)|
 |:--:|
