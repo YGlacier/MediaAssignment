@@ -12,7 +12,7 @@ from model import ResNet
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-param_path = "./models/20/64000.model"
+param_path = "./models/32/64000.model"
 
 transform = transforms.Compose(
     [transforms.ToTensor(),
@@ -23,7 +23,7 @@ testset = torchvision.datasets.CIFAR10(root='../data', train=False,
 testloader = torch.utils.data.DataLoader(testset, batch_size=128,
                                          shuffle=False, num_workers=2)
 
-net = ResNet(n=3)
+net = ResNet(n=5)
 net = net.to(device=device)
 net = torch.nn.DataParallel(net)
 
@@ -45,6 +45,6 @@ print("Accuracy: %f %%" % (100 * correct_count / total_count))
 
 
 # 20: 82.66%
-# 32: 86.41%
+# 32: 85.62%
 # 44: 86.02%
 # 56: 87.03%

@@ -12,7 +12,7 @@ from model import PlainNet
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-param_path = "./models/20/64000.model"
+param_path = "./models/44/64000.model"
 
 transform = transforms.Compose(
     [transforms.ToTensor(),
@@ -23,7 +23,7 @@ testset = torchvision.datasets.CIFAR10(root='../data', train=False,
 testloader = torch.utils.data.DataLoader(testset, batch_size=128,
                                          shuffle=False, num_workers=2)
 
-net = PlainNet(n=3)
+net = PlainNet(n=7)
 net = net.to(device=device)
 net = torch.nn.DataParallel(net)
 
@@ -46,5 +46,5 @@ print("Accuracy: %f %%" % (100 * correct_count / total_count))
 
 # 20: 84.84%
 # 32: 81.12%
-# 44: 81.84%
+# 44: 79.57%
 # 56: 74.37%
