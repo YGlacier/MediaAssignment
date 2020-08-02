@@ -10,7 +10,7 @@ import numpy as np
 
 from model import PlainNet
 
-path = "./models/56/"
+path = "./models/44/"
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -35,7 +35,7 @@ trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size,
                                           shuffle=True, num_workers=2)
 
 
-net = PlainNet(n=9)
+net = PlainNet(n=7)
 net = net.to(device=device)
 net = torch.nn.DataParallel(net)
 
